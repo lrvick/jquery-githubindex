@@ -1,5 +1,5 @@
 (function($) {
-    $.fn.githubIndex = function(users, repos) {
+    $.fn.githubIndex = function(users, repos, callback) {
         var $el = this
         var feed = [];
 
@@ -87,6 +87,9 @@
                     .text(value['html_url'])
                     .appendTo($repo_dl)
                 })
+                if (callback){
+                    callback($el)
+                }
             }
         }
 

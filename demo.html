@@ -9,7 +9,10 @@
       $(document).ready(function(){
         $('#projects').githubIndex(
           ['lrvick'], // include all projects owned by these users
-          ['tawlk/synt', 'tawlk/hyve', 'tawlk/kral'] // include these repos
+          ['tawlk/synt', 'tawlk/hyve', 'tawlk/kral'], // include these repos
+          function($el){ // (optional) run a callback function after render
+            console.log($el)
+          }
         )
       })
     </script>
