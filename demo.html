@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.githubindex.js"></script>
+    <title>jQuery-GithubIndex Demo</title>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#projects').githubIndex(
+          ['lrvick'], // include all projects owned by these users
+          ['tawlk/synt', 'tawlk/hyve', 'tawlk/kral'] // include these repos
+        )
+      })
+    </script>
+  </head>
+  <body>
+    <div id="projects"></div>
+  </body>
+</html>
