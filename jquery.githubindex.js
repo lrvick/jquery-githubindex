@@ -58,9 +58,11 @@
                     $('<dt>')
                         .text('Last Updated:')
                         .appendTo($dl)
-                    $('<dd>')
-                        .text(value['updated_at'])
+                    var $updated_dd = $('<dd>')
                         .appendTo($dl)
+                    $('<time>')
+                        .text(value['updated_at'])
+                        .appendTo($updated_dd)
                     if (value['language']){
                         $('<dt>')
                             .text('Primary Language:')
@@ -89,6 +91,8 @@
         }
 
         getFeeds();
+
+        return this
 
     }
 })(jQuery);
