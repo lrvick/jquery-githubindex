@@ -29,8 +29,8 @@
 
         var sortFeeds = function(feed) {
             feed.sort(function(a, b) {
-                var date_a = new Date(a['updated_at'])
-                var date_b = new Date(b['updated_at'])
+                var date_a = new Date(a['pushed_at'])
+                var date_b = new Date(b['pushed_at'])
                 return date_b.getTime() - date_a.getTime();
             });
             return feed
@@ -61,7 +61,7 @@
                     var $updated_dd = $('<dd>')
                         .appendTo($dl)
                     $('<time>')
-                        .text(value['updated_at'])
+                        .text(value['pushed_at'])
                         .appendTo($updated_dd)
                     if (value['language']){
                         $('<dt>')
